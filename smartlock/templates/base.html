@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		{% block title %}<title>Welcome to HomeSecurity!</title>{% endblock %}
+
+		{% load static %}
+		<link rel="stylesheet" type="text/css"
+			  href="{% static 'accounts/style.css' %}">
+
+	</head>
+	<body>
+		<main>
+			{% block content %}
+			<h1>Welcome to Home Security!</h1>
+			{% endblock %}
+		</main>
+	</body>
+</html>

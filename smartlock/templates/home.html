@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+		<link rel="stylesheet" type="text/css"
+			  href="{% static 'accounts/style.css' %}">
+
+{% block content %}
+{% if user.is_authenticated %}
+	Nazdar, {{ user.username }}!
+	<br>
+	<input type="button" id="script" name="unlock_button" value=" Unlock " onclick="unlock_door">
+	<script>
+		function unlock_door(){
+			$.ajax({
+				url: "accounts/smartlock/scripts/unlock.py"
+				context: document.body
+			}).done(function() {
+				alert('python script finished'));
+			});
+		}
+	</script>
+	
+	<p><a href="{% url 'logout' %}"><button type="button">Log out</button></a></p>
+{% else %}
+	<p>You are not logged in</p>
+	<a href="{% url 'login' %}"><button type="button">Log in</button></a>
+	<a href="{% url 'signup' %}"><button type="button">Sign up</button></a>
+{% endif %}
+{% endblock %}
