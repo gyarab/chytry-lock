@@ -5,11 +5,12 @@
 
 <div class="login-page">
   <div class="form">
+	  <h1>LOG IN</h1>
       <form class="login-form" method="post">
 		  {% csrf_token %}
 		  {{ form.username }}
 		  {{ form.password }}
-		  <button type="submit">login</button>
+		  <button type="submit">submit</button>
       <p class="message">Not registered? <a href="{% url 'signup' %}">Create an account</a></p>
     </form>
   </div>
