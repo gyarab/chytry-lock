@@ -1,18 +1,15 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
 
-p {
-  text-align: left;
-
-}
 .login-page {
   width: 360px;
   padding: 8% 0 0;
   margin: auto;
 }
-.signup-page {
-  width: 360px;
-  padding: 8% 0 0;
-  margin: auto;
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  color: #333333;
+   padding-bottom: 20px;
 }
 .form {
   position: relative;
@@ -23,9 +20,12 @@ p {
   padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
 }
 .form input {
-  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: bolder;
+  color: #686868;
   outline: 0;
   background: #f2f2f2;
   width: 100%;
@@ -34,12 +34,14 @@ p {
   padding: 15px;
   box-sizing: border-box;
   font-size: 14px;
+  border-radius: 5px;
 }
 .form button {
-  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
   text-transform: uppercase;
   outline: 0;
-  background: #4CAF50;
+  background: #365EEB;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -48,23 +50,27 @@ p {
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
+  border-radius: 5px;
+  margin-top: 12px;
 }
+
 .form button:hover,.form button:active,.form button:focus {
-  background: #43A047;
+  background: #3631EB;
 }
 .form .message {
+  font-family: "Raleway", sans-serif;
+  font-weight: lighter;
   margin: 15px 0 0;
   color: #b3b3b3;
   font-size: 12px;
 }
 .form .message a {
-  color: #4CAF50;
+  color: #365EEB;
   text-decoration: none;
 }
 .form .register-form {
   display: none;
 }
-
 .container {
   position: relative;
   z-index: 1;
@@ -99,12 +105,24 @@ p {
   color: #EF3B3A;
 }
 body {
-  background: #76b852; /* fallback for old browsers */
-  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
-  background: -moz-linear-gradient(right, #76b852, #8DC26F);
-  background: -o-linear-gradient(right, #76b852, #8DC26F);
-  background: linear-gradient(to left, #76b852, #8DC26F);
-  font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	width: 100wh;
+	height: 90vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #843EFF, #365EEB, #38D7FF, #27E89A, #37FF30);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
 }
