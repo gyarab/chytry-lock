@@ -6,7 +6,7 @@ from django.forms.widgets import PasswordInput, TextInput
 
 
 class SignUpForm(UserCreationForm):
-    email = forms.EmailField(required=True, help_text='Required. Please enter a valid e-mail address.')
+    password = forms.EmailField(required=True, help_text='Required. Please enter a valid e-mail address.')
     email = forms.EmailField(required=True, widget=TextInput(attrs={'class': 'span2', 'placeholder': 'e-mail'}), help_text='Required. Please enter a valid e-mail address.')
 
     class Meta:
