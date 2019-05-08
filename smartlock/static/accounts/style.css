@@ -2,27 +2,58 @@
 
 /* SMARTPHONE */
 @media only screen and (max-width: 1000px) {
-  .page{
+  .home-page {
     margin: 60px auto;
-    max-width: 90%;
-    padding: 7%;
-    border-radius: 10px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 15px 15px 0 rgba(0, 0, 0, 0.24);
+    width: 90%;
   }
   .login-page {
     width: 90%;
     margin: 60px auto;
   }
+  .button1 {
+    padding: 25px;
+    font-size: 33px;
+    margin: 10px;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    outline: 0;
+    background: #365EEB;
+    width: 100%;
+    border: 0;
+    color: #FFFFFF;
+    border-radius: 5px;
+  }
+    .button2 {
+    padding: 25px;
+    font-size: 33px;
+    margin: 10px;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    outline: 0;
+    background: #929292;
+    width: 100%;
+    border: 0;
+    color: #FFFFFF;
+    border-radius: 5px;
+  }
+  .page {
+    max-width: 90%;
+    padding: 7%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 15px 15px 0 rgba(0, 0, 0, 0.24);
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    text-align: center;
+  }
   .title {
     font-size: 66px;
   }
   .welcome-text {
-
-  }
-  div button{
-    padding: 50px;
-    font-size: 33px;
-    margin-top: 4%;
+    font-size: 300%;
+    margin-bottom: 70px;
   }
   .form {
     max-width: 90%;
@@ -96,9 +127,6 @@
       width: 360px;
       margin: auto;
     }
-    .page{
-
-  }
     .form {
       position: relative;
       margin: auto;
@@ -143,6 +171,9 @@ body {
 	animation: Gradient 15s ease infinite;
 	padding: 10px;
 }
+.inline-buttons {
+    text-align: center;
+}
 span:last-child
 {
     background-color: #8ff;
@@ -181,27 +212,6 @@ span:last-child
 .welcome-text {
   font-family: "Raleway", sans-serif;
   color: #333333;
-}
-.page {
-  padding: 8% 0 0;
-  position: relative;
-  z-index: 1;
-  background: #FFFFFF;
-  text-align: center;
-}
-div button{
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  outline: 0;
-  background: #365EEB;
-  width: 50%;
-  border: 0;
-  color: #FFFFFF;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
-  border-radius: 5px;
 }
 .form {
   position: relative;

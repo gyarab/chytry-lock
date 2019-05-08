@@ -22,7 +22,6 @@ from accounts.forms.forms import UserLoginForm, UserSignUpForm
 from django.contrib.auth.views import LoginView
 from accounts import views as acc_views
 
-
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^accounts/', include('accounts.urls')), #accounts app, must be above the auth app
@@ -30,5 +29,6 @@ urlpatterns = [
     url(r'^login/$', LoginView.as_view(template_name='registration/login.html'), name='login', kwargs={"authentication_form": UserLoginForm}),
     url(r'^$', TemplateView.as_view(template_name='home.html'), name='home'), #home page
     url(r'^signup/$', acc_views.signup, name='signup'),
+    url(r'^output', acc_views.unlock, name='script'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
