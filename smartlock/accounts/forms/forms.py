@@ -5,27 +5,29 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.forms.widgets import PasswordInput, TextInput
 
 
-class SignUpForm(UserCreationForm):
-    password = forms.EmailField(required=True, help_text='Required. Please enter a valid e-mail address.')
-    email = forms.EmailField(required=True, widget=TextInput(attrs={'class': 'span2', 'placeholder': 'e-mail'}), help_text='Required. Please enter a valid e-mail address.')
+class UserSignUpForm(UserCreationForm):
+    username = forms.CharField(max_length=30, required=True, widget=TextInput(attrs={'placeholder': 'nickname'})),
+    email = forms.EmailField(required=True, widget=TextInput(attrs={'placeholder': 'e-mail'}),
+                             help_text='Required. Please enter a valid e-mail address.')
+    password = forms.CharField(max_length=100, required=True, widget=TextInput(attrs={'placeholder': 'password'})),
 
     class Meta:
         model = User
-        UserCreationFormFields = ('username', 'email', 'password1', 'password2')
+        UserCreationFormFields = ('username', 'email', 'password')
         exclude = []
 
 
-class AuthForm(AuthenticationForm):
+class UserLoginForm(AuthenticationForm):
+    username = forms.CharField(widget=TextInput(attrs={'placeholder': 'nickname'})),
+    password = forms.CharField(widget=PasswordInput(attrs={'placeholder': 'password'})),
+
     class Meta:
         model = AuthenticationForm
-        fields = '__all__'
+        fields = ('username', 'password')
+        exclude = []
 
         def __init__(self, *args, **kwargs):
             super(AuthenticationForm, self).__init__(*args, **kwargs)
 
             for field in self.fields.values():
                 field.error_messages = {'required': '{fieldname} is required'.format(fieldname=field.label)}
-
-    username = forms.CharField(widget=TextInput(attrs={'placeholder': 'Nickname'})),
-    email = forms.CharField(widget=TextInput(attrs={'placeholder': 'E-mail'})),
-    password = forms.CharField(widget=PasswordInput(attrs={'placeholder':'Password'}))

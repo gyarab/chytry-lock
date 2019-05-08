@@ -21,8 +21,10 @@
 	
 	<p><a href="{% url 'logout' %}"><button type="button">Log out</button></a></p>
 {% else %}
-	<p>You are not logged in</p>
-	<a href="{% url 'login' %}"><button type="button">Log in</button></a>
-	<a href="{% url 'signup' %}"><button type="button">Sign up</button></a>
+	<div class="page">
+		<p class="welcome-text">You are not logged in</p>
+		<span><a href="{% url 'login' %}"><button type="button">Log in</button></a></span>
+		<span><a href="{% url 'signup' %}"><button type="button">Sign up</button></a></span>
+	</div>
 {% endif %}
 {% endblock %}

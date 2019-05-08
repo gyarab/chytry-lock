@@ -1,40 +1,223 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 
-.login-page {
-  width: 360px;
-  padding: 8% 0 0;
-  margin: auto;
+/* SMARTPHONE */
+@media only screen and (max-width: 1000px) {
+  .page{
+    margin: 60px auto;
+    max-width: 90%;
+    padding: 7%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 15px 15px 0 rgba(0, 0, 0, 0.24);
+  }
+  .login-page {
+    width: 90%;
+    margin: 60px auto;
+  }
+  .title {
+    font-size: 66px;
+  }
+  .welcome-text {
+
+  }
+  div button{
+    padding: 50px;
+    font-size: 33px;
+    margin-top: 4%;
+  }
+  .form {
+    max-width: 90%;
+    padding: 7%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 15px 15px 0 rgba(0, 0, 0, 0.24);
+  }
+  .form input {
+    font-size: 40px;
+    padding: 30px;
+    margin: 0 0 4%;
+    border-radius: 5px;
 }
-h1 {
+  .form button {
+    padding: 50px;
+    font-size: 33px;
+    margin-top: 4%;
+  }
+  .form .message {
+    margin: 60px 0 0;
+    color: #b3b3b3;
+    font-size: 34px;
+  }
+}
+/*------smartphone------*/
+
+
+
+/* TABLET*/
+@media only screen and (min-width: 1001px) and (max-width: 1100px) {
+.login-page {
+      width: 360px;
+      margin: auto;
+    }
+    .form {
+      position: relative;
+      margin: auto;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+      border-radius: 5px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+    .form input {
+      border: 0;
+      margin: 0 0 12px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+      border-radius: 5px;
+    }
+    .form button {
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .form .message {
+      margin: 15px 0 0;
+      font-size: 12px;
+    }
+    .form .register-form {
+      display: none;
+    }
+}
+/*------tablet------*/
+
+
+/* DESKTOP */
+@media only screen and (min-width: 1101px) {
+    .login-page {
+      width: 360px;
+      margin: auto;
+    }
+    .page{
+
+  }
+    .form {
+      position: relative;
+      margin: auto;
+      padding: 30px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+      border-radius: 5px;
+    }
+    .form input {
+      border: 0;
+      margin: 0 0 12px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+      border-radius: 5px;
+    }
+    .form button {
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .form .message {
+      margin: 15px 0 0;
+      font-size: 12px;
+    }
+
+    .form .register-form {
+      display: none;
+    }
+}
+/*------desktop------*/
+
+
+
+body {
+	width: 100wh;
+	height: 90vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #843EFF, #365EEB, #38D7FF, #27E89A, #37FF30);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+	padding: 10px;
+}
+span:last-child
+{
+    background-color: #8ff;
+    float: right;
+}
+span:first-child
+{
+    float: left;
+}
+span:last-child
+{
+    float: right;
+}
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.login-page {
+  padding: 8% 0 0;
+}
+.title {
+  text-transform: capitalize;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   color: #333333;
-   padding-bottom: 20px;
+  padding-bottom: 20px;
+}
+.welcome-text {
+  font-family: "Raleway", sans-serif;
+  color: #333333;
+}
+.page {
+  padding: 8% 0 0;
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  text-align: center;
+}
+div button{
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: 0;
+  background: #365EEB;
+  width: 50%;
+  border: 0;
+  color: #FFFFFF;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 5px;
 }
 .form {
   position: relative;
   z-index: 1;
   background: #FFFFFF;
-  max-width: 360px;
-  margin: 0 auto 100px;
-  padding: 45px;
   text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  border-radius: 5px;
 }
 .form input {
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bolder;
-  color: #686868;
+  color: black;
   outline: 0;
   background: #f2f2f2;
   width: 100%;
   border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
   box-sizing: border-box;
-  font-size: 14px;
-  border-radius: 5px;
 }
 .form button {
   font-family: "Raleway", sans-serif;
@@ -44,14 +227,11 @@ h1 {
   background: #365EEB;
   width: 100%;
   border: 0;
-  padding: 15px;
   color: #FFFFFF;
-  font-size: 14px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
   border-radius: 5px;
-  margin-top: 12px;
 }
 
 .form button:hover,.form button:active,.form button:focus {
@@ -60,9 +240,7 @@ h1 {
 .form .message {
   font-family: "Raleway", sans-serif;
   font-weight: lighter;
-  margin: 15px 0 0;
   color: #b3b3b3;
-  font-size: 12px;
 }
 .form .message a {
   color: #365EEB;
@@ -103,26 +281,4 @@ h1 {
 }
 .container .info span .fa {
   color: #EF3B3A;
-}
-body {
-	width: 100wh;
-	height: 90vh;
-	color: #fff;
-	background: linear-gradient(-45deg, #843EFF, #365EEB, #38D7FF, #27E89A, #37FF30);
-	background-size: 400% 400%;
-	-webkit-animation: Gradient 15s ease infinite;
-	-moz-animation: Gradient 15s ease infinite;
-	animation: Gradient 15s ease infinite;
-}
-
-@keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
 }
