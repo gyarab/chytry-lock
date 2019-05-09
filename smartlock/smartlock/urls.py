@@ -14,6 +14,8 @@ urlpatterns = [
         kwargs={"authentication_form": UserLoginForm}), #login page
     url(r'^$', TemplateView.as_view(template_name='home.html'), name='home'), #home page
     url(r'^signup/$', acc_views.signup, name='signup'), #signup page
-    url(r'^output', acc_views.unlock, name='script'),#lock script
+    url(r'^output-lock', acc_views.lock, name='script-lock'),#lock script
+    url(r'^output-unlock', acc_views.unlock, name='script-unlock'),#unlock script
+    url(r'^locked', TemplateView.as_view(template_name='home_locked.html'), name='locked'),
+    url(r'^unlocked', TemplateView.as_view(template_name='home_unlocked.html'), name='unlocked'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
