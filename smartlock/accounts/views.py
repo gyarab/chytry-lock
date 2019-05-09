@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate
 from accounts.forms.forms import UserSignUpForm, UserLoginForm
-# import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 import time
 
 
@@ -19,20 +19,20 @@ def signup(request):
 
 
 def unlock(request):
-    # GPIO.setmode(GPIO.BOARD)
-    # GPIO.setup(37, GPIO.OUT)
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(37, GPIO.OUT)
 
-    # GPIO.output(37, True)
+    GPIO.output(37, True)
     time.sleep(10.5)
-    # GPIO.cleanup()
+    GPIO.cleanup()
     return render(request, 'home.html')
 
 def lock(request):
-    # GPIO.setmode(GPIO.BOARD)
-    # GPIO.setup(37, GPIO.OUT)
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(37, GPIO.OUT)
 
-    # GPIO.output(37, True)
+    GPIO.output(3, True)
     time.sleep(10.5)
-    # GPIO.cleanup()
+    GPIO.cleanup()
     return render(request, 'home.html')
 
