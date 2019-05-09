@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+		<link rel="stylesheet" type="text/css"
+			  href="{% static 'accounts/style.css' %}">
+
+{% block content %}
+	<div class="home-page">
+		<form class="page">
+			<button onclick="location.href='{% url 'script-lock' %}'; alert('Locked!');" value="Locked">Lock</button>
+			<a href="{% url 'logout' %}"><button type="button" style="background-color: #939393">Log out</button></a>
+		</form>
+	</div>
+{% endblock %}
