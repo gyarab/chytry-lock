@@ -6,11 +6,21 @@
 <div class="login-page">
   <div class="form" method="post">
     <h1 class="title">sign up</h1>
-    <form class="signup-form" method="post">
+    {% if messages %}
+      {% for message in messages %}
+        {{ message }}
+      {% endfor %}
+    {% endif %}
+    <form class="login-form" method="post">
       {% csrf_token %}
-      {{ form.username }}
-      {{ form.email }}
-      {{ form.password }}
+      {% for field in form %}
+        {{ field }}
+        {% if field.errors %}
+          {% for error in field.errors %}
+            <p class="error-message">{{ error }}</p>
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
       <button type="submit">create</button>
       <p class="message">Already registered? <a href="{% url 'login' %}">Log In</a></p>
     </form>

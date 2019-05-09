@@ -5,18 +5,21 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-	Nazdar, {{ user.username }}!
-	<br>
-	<button onclick="location.href='{% url 'script' %}'">Unlock</button>
+	<div class="home-page">
+		<form class="page">
+			<p class="welcome-text">Welcome, {{ user.username }}!</p>
+			<button onclick="location.href='{% url 'script' %}'; alert('Unlocked');" value="Unlocked">Unlock</button>
+			<a href="{% url 'logout' %}"><button type="button" style="background-color: #939393">Log out</button></a>
+		</form>
 
-	<p><a href="{% url 'logout' %}"><button type="button">Log out</button></a></p>
+	</div>
 	
 {% else %}
 	<div class="home-page">
 		<form class="page">
 			<p class="welcome-text">You are not logged in</p>
-			<a href="{% url 'login' %}"><button type="button1">log in</button>
-			<a href="{% url 'signup' %}"><button type="button2">sign up</button>
+			<a href="{% url 'login' %}"><button type="button">log in</button></a>
+			<a href="{% url 'signup' %}"><button type="button" style="background-color: #939393">sign up</button></a>
 		</form>
 	</div>
 {% endif %}
