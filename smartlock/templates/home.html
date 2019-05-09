@@ -8,7 +8,9 @@
 	<div class="home-page">
 		<form class="page">
 			<p class="welcome-text">Welcome, {{ user.username }}!</p>
-			<button onclick="location.href='{% url 'script' %}'; alert('Unlocked');" value="Unlocked">Unlock</button>
+			<p class="welcome-text">Is your door currently locked?</p>
+			<a href="{% url 'locked' %}"><button type="button">YES</button></a>
+			<a href="{% url 'unlocked' %}"><button type="button">NO</button></a>
 			<a href="{% url 'logout' %}"><button type="button" style="background-color: #939393">Log out</button></a>
 		</form>
 
