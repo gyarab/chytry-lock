@@ -6,7 +6,7 @@
 {% block content %}
 	<div class="home-page">
 		<form class="page">
-			<button onclick="location.href='{% url 'script-lock' %}'; alert('Locked!');" value="Locked">Lock</button>
+			<a href="{% url 'script-lock' %}"><button type="button" onclick="alert('Locking... Press OK to continue.')">Lock</button></a>
 			<a href="{% url 'logout' %}"><button type="button" style="background-color: #939393">Log out</button></a>
 		</form>
 	</div>

@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from accounts.forms.forms import UserSignUpForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-# import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 import time
 
 
@@ -20,20 +20,24 @@ def signup(request):
 
 
 def unlock(request):
-    # GPIO.setmode(GPIO.BOARD)
-    # GPIO.setup(37, GPIO.OUT)
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(37, GPIO.OUT)
+    GPIO.setup(7, GPIO.OUT)
 
-    # GPIO.output(37, True)
-    time.sleep(10.5)
-    # GPIO.cleanup()
-    return HttpResponseRedirect(reverse('unlocked'), request)
+    GPIO.output(7, False)
+    GPIO.output(37, True)
+    time.sleep(2)
+    GPIO.cleanup()
+    return redirect('unlocked')
 
 
 def lock(request):
-    # GPIO.setmode(GPIO.BOARD)
-    # GPIO.setup(37, GPIO.OUT)
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(37, GPIO.OUT)
+    GPIO.setup(7, GPIO.OUT)
 
-    # GPIO.output(37, True)
-    time.sleep(10.5)
-    # GPIO.cleanup()
-    return redirect('/locked')
+    GPIO.output(37, False)
+    GPIO.output(7, True)
+    time.sleep(2)
+    GPIO.cleanup()
+    return redirect(' locked')

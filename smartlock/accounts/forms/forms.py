@@ -1,11 +1,10 @@
 from django import forms
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 
 class UserSignUpForm(UserCreationForm):
-    username = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder':'nickname'}))
+    username = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'nickname'}))
     email = forms.EmailField(required=True, widget=forms.EmailInput(attrs={'placeholder': 'e-mail'}))
     password1 = forms.CharField(max_length=100, required=True,
                                widget=forms.PasswordInput(attrs={'placeholder': 'password'}))
@@ -19,8 +18,8 @@ class UserSignUpForm(UserCreationForm):
 
 
 class UserLoginForm(AuthenticationForm):
-    username = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'nickname'}))
-    password = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'password'}))
+    username = forms.CharField(max_length=100, widget=forms.widgets.TextInput(attrs={'placeholder': 'nickname'}))
+    password = forms.CharField(widget=forms.widgets.PasswordInput(attrs={'placeholder': 'password'}))
 
     class Meta:
         model = AuthenticationForm

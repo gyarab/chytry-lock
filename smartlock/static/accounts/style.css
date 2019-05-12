@@ -27,9 +27,16 @@
   .title {
     font-size: 66px;
   }
+  .title-pas {
+    font-size: 66px;
+  }
   .welcome-text {
     font-size: 300%;
     margin-bottom: 70px;
+  }
+  .instruction-text {
+    font-size: 150%;
+    margin-bottom: 0px;
   }
   .error-message {
     font-weight: bolder;
@@ -118,6 +125,9 @@
   .welcome-text {
     font-size: 25px;
   }
+  .instruction-text {
+    font-size: 15px;
+  }
   .home-page button:hover,.form button:active,.form button:focus {
     background: #3631EB;
   }
@@ -188,9 +198,24 @@ body {
   color: #333333;
   padding-bottom: 20px;
 }
+.title-pas {
+  text-transform: capitalize;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  color: #333333;
+  padding-bottom: 20px;
+  text-align: center;
+}
 .welcome-text {
   font-family: "Raleway", sans-serif;
   color: #333333;
+  text-align: center;
+}
+.instruction-text {
+  font-family: "Raleway", sans-serif;
+  color: #333333;
+  text-align: left;
+  margin-left: 3px;
 }
 .form {
   position: relative;
