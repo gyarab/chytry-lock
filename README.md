@@ -7,5 +7,5 @@ python manage.py runserver
 
 poté z terminálu zkopírujte adresu serveru a otevřete jí v prohlížeči
 
-Zdroj k mobilní aplikaci můžete nalézt v smartlock102,
+Zdroj k mobilní aplikaci můžete nalézt v smartlock102.rar nebo smartlock.rar,
 instalační program pro mobil se nazýva app-release.apk
