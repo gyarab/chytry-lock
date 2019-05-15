@@ -1,11 +1,14 @@
 # chytry-lock
 
-Jak spustit projekt:
-v CMD/Terminálu po nainstalování pythonu spusťte v chytry-lock/smartlock soubor manage.py:
+How to use the web service:
 
-python manage.py runserver
+1. Download PuTTY from greenend.org.uk
 
-poté z terminálu zkopírujte adresu serveru a otevřete jí v prohlížeči
+2. Start PuTTY, add IP address of the Raspberry Pi to Host Name field and click open
 
-Zdroj k mobilní aplikaci můžete nalézt v smartlock102.rar nebo smartlock.rar,
-instalační program pro mobil se nazýva app-release.apk
+3. In terminal type: python3 manage.py runserver 0.0.0.0:8000
+
+4. In your browser insert link: <PI IP address>:8000
+
+To start using the mobile app open file smartlock102.rar or smartlock.rar,
+instalation file for smartphones is called app-release.apk.
