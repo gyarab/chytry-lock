@@ -8,7 +8,7 @@ How to use the web service:
 
 3. In terminal type: python3 manage.py runserver 0.0.0.0:8000
 
-4. In your browser insert link: //PI IP address//:8000
+4. In your browser insert link: //Raspberry Pi IP address//:8000
 
 To start using the mobile app open file smartlock102.rar or smartlock.rar,
 instalation file for smartphones is called app-release.apk.
